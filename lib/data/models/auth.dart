@@ -126,9 +126,17 @@ class AuthModel extends ChangeNotifier {
     var uuid = new Uuid();
     String _username = username;
     String _password = password;
+    var _scopes = [
+      "board_read",
+      "board_write",
+      "notification_read",
+      "team_read",
+      "project_read",
+      "project_write"
+    ];
 
     // TODO: API LOGIN CODE HERE
-    await Future.delayed(Duration(seconds: 3));
+    // await Future.delayed(1Duration(seconds: 3));
     print("Logging In => $_username, $_password");
 
     if (_rememberMe) {
